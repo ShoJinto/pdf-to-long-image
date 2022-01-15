@@ -2,7 +2,7 @@
 
 PDF转换成长图工具（JPG/JPEG）
 
-最近在进行报销的时候财务要求将PDF格式的消费账单以图片格式上传，本来很简单的事情。但整个PDF文件有3页，所以常规的屏幕截图工具（QQ的`Ctrl+Alt+A`）已经无法满足，为了达到不目的在网上搜索的一番之后发现已经有人用`Python`实现，只不过是命令行的。为了使用方便这里用`tkinter`封装了一下，特分享出来
+最近在进行报销的时候财务要求将PDF格式的消费账单以图片格式上传，本来很简单的事情。但整个PDF文件有3页，所以常规的屏幕截图工具（QQ的`Ctrl+Alt+A`）已经无法满足，为了达到将整个pdf转换成图片的目的在网上搜索一番之后发现已经有人用`Python`实现，只不过是命令行的。为了使用方便这里用`tkinter`封装了一下，特分享出来
 
 forked from [Convert PDF to Long Image(JPG)](https://github.com/whitelok/pdf-to-long-image), source project is a
 command-line tool. I modified to gui, it look like below:
