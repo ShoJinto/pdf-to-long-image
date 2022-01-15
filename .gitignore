@@ -5,3 +5,7 @@
 *.pdf
 *.jpg
 *.png
+venv
+.idea
+build
+dist
