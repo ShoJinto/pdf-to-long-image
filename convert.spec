@@ -7,7 +7,7 @@ block_cipher = None
 a = Analysis(['convert.py'],
              pathex=[],
              binaries=[],
-             datas=[("pdf-to-image.ico","."),("pdf-to-image.gif",".")],
+             datas=[("resource/pdf-to-image.ico","."),("resource/pdf-to-image.gif",".")],
              hiddenimports=[],
              hookspath=[],
              hooksconfig={},
@@ -37,4 +37,4 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None , icon='pdf-to-image.ico')
+          entitlements_file=None , icon='resource/pdf-to-image.ico')
