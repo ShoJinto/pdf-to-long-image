@@ -7,7 +7,7 @@ PDF转换成长图工具（JPG/JPEG）
 forked from [Convert PDF to Long Image(JPG)](https://github.com/whitelok/pdf-to-long-image), source project is a
 command-line tool. I modified to gui, it look like below:
 
-![MainConcept](demo/main_image.jpg)
+![MainConcept](resource/main_image1.jpg)
 
 ### How to use
 
@@ -18,7 +18,7 @@ command-line tool. I modified to gui, it look like below:
 3. `pip install -r requirements.txt`
 4. `python convert.py `
 
-![DemoResult](demo/demo.jpg)
+![DemoResult](resource/main_image2.jpg)
 
 #### **build to exe**
 

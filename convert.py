@@ -63,11 +63,11 @@ style = Style(window)
 
 # 设置窗口图标、窗口title、设置背景图
 try:
-    window.iconbitmap('pdf-to-image.ico')
-    bg_image = tk.PhotoImage(file='pdf-to-image.gif')
+    window.iconbitmap('resource/pdf-to-image.ico')
+    bg_image = tk.PhotoImage(file='resource/pdf-to-image.gif')
 except tk.TclError:
-    bg_image = tk.PhotoImage(file=resource_path('pdf-to-image.gif'))
-    window.iconbitmap(resource_path('pdf-to-image.ico'))
+    bg_image = tk.PhotoImage(file=resource_path('resource/pdf-to-image.gif'))
+    window.iconbitmap(resource_path('resource/pdf-to-image.ico'))
 window.title("PDF转长图工具")
 tk.Label(window, image=bg_image).grid(row=0, column=0, columnspan=4, rowspan=2,
                                       sticky=tk.W + tk.E + tk.N + tk.S, pady=5)
