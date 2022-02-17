@@ -80,3 +80,42 @@ except tk.TclError:
 ...
 ```
 
+#### 异常情况
+
+- **pyinstaller 生成的exe 执行报错： `no module named xxx`**
+
+如果通过上面的步骤之后运行编译好的exe文件报错`no module named xxx`,这是因为`pyinstaller`无法自动遍历到项目中的依赖模块，需要使用 `-p` 指定模块所在的位置。例如：
+
+```shell
+> pyinstall -w -F -i pdf-to-image.ico -p venv\Lib\site-packages covert.py 
+...
+10023 INFO: Updating resource type 24 name 1 language 0
+10026 INFO: Appending PKG archive to EXE
+13704 INFO: Building EXE from EXE-00.toc completed successfully.
+...
+```
+打开生成的`.spec`文件与之前的进行对比发现差异在
+- old
+```shell
+> cat convert.spec
+...
+a = Analysis(['convert.py'],
+             pathex=[],
+             binaries=[],
+             datas=[("pdf-to-image.ico","."),("pdf-to-image.gif",".")], # 此处便是修改后的内容，这里的格式为：[(resource_file,resource_path)]
+             hiddenimports=[],
+             hookspath=[],
+...
+```
+- new
+```shell
+> cat convert.spec
+...
+a = Analysis(['convert.py'],
+             pathex=['venv\\Lib\\site-packages'],
+             binaries=[],
+             datas=[("pdf-to-image.ico","."),("pdf-to-image.gif",".")], # 此处便是修改后的内容，这里的格式为：[(resource_file,resource_path)]
+             hiddenimports=[],
+             hookspath=[],
+...
+```
